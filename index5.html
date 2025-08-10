@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohd Anas - Data Analyst</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            margin: 0;
+            background: #f5f5f5;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(90deg, #0d1b2a, #1b263b);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            animation: fadeInDown 1.2s ease-in-out;
+        }
+        header img {
+            width: 160px;
+            border-radius: 50%;
+            border: 4px solid white;
+            animation: bounce 3s infinite ease-in-out;
+            box-shadow: 0 0 20px rgba(255,255,255,0.6);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        header img:hover {
+            transform: scale(1.08);
+            box-shadow: 0 0 40px rgba(255, 204, 0, 0.8);
+        }
+        header h1 {
+            font-size: 2.8em;
+            margin: 15px 0 5px;
+            letter-spacing: 2px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        header h2 {
+            font-weight: normal;
+            font-size: 1.3em;
+            color: #ffcc00;
+            animation: fadeIn 2s ease-in-out;
+        }
+        header p {
+            margin: 5px 0;
+            animation: fadeIn 2.2s ease-in-out;
+        }
+
+        /* Navigation */
+        nav {
+            background: #1b263b;
+            text-align: center;
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        nav a {
+            color: white;
+            margin: 0 18px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s, transform 0.3s;
+        }
+        nav a:hover {
+            color: #ffcc00;
+            transform: translateY(-2px);
+        }
+
+        /* Sections */
+        section {
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-in-out;
+        }
+        section.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h3 {
+            color: #0d1b2a;
+            border-bottom: 3px solid #ffcc00;
+            padding-bottom: 6px;
+            margin-bottom: 15px;
+            position: relative;
+            animation: slideInLeft 1s ease-in-out;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            padding: 6px 0;
+            animation: fadeInUp 0.8s ease-in-out;
+        }
+
+        /* Footer */
+        footer {
+            background: #0d1b2a;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+            font-size: 0.9em;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInDown {
+            from { transform: translateY(-40px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes slideInLeft {
+            from { transform: translateX(-40px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="image.png" alt="Mohd Anas">
+    <h1>MOHD ANAS</h1>
+    <h2>Data Analyst</h2>
+    <p><i class="fas fa-phone"></i> +91 7055813193 | <i class="fas fa-envelope"></i> chouhananas7@gmail.com</p>
+    <p><i class="fas fa-map-marker-alt"></i> Kairana, Shamli, U.P. | 
+       <a href="https://www.linkedin.com/in/mohd-anas-bbb191322/" style="color:white">LinkedIn</a> | 
+       <a href="https://github.com/anaschouhan001" style="color:white">GitHub</a>
+    </p>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+</nav>
+
+<section id="about">
+    <h3>About Me</h3>
+    <p>Motivated BCA graduate with a strong foundation in data analysis, visualization, and machine learning. Skilled in uncovering patterns to support data-driven decisions. Eager to apply analytical and problem-solving skills in a Data Analyst internship to gain real-world experience and grow professionally.</p>
+</section>
+
+<section id="certificates">
+    <h3>Certificates</h3>
+    <ul>
+        <li>Internship Studio Certificate of completion of training of Data Analytics</li>
+        <li>Internship Studio Certificate of Internship of Data Analytics</li>
+    </ul>
+</section>
+
+<section id="education">
+    <h3>Education</h3>
+    <ul>
+        <li><strong>Bachelor of Computer Applications</strong> - IIMT University (2022 - 2025)</li>
+        <li><strong>Intermediate</strong> - S.N. Inter College, Kairana (2019 - 2021)</li>
+    </ul>
+</section>
+
+<section id="skills">
+    <h3>Skills</h3>
+    <ul>
+        <li>Python, HTML, CSS, DBMS, SQL, Power BI, JavaScript, Advanced MS Excel</li>
+    </ul>
+</section>
+
+<section id="projects">
+    <h3>Projects</h3>
+    <ul>
+        <li><strong>Face Emotion Detection:</strong> Built a model to detect emotions from facial expressions using computer vision.</li>
+        <li><strong>Zomato Clone:</strong> Developed a food delivery app with restaurant search and order features.</li>
+        <li><strong>To-Do List App:</strong> Created a task manager with add, edit, and complete options.</li>
+        <li><strong>Flappy Bird Game:</strong> Designed a game with real-time scoring and controls.</li>
+        <li><strong>College Management System:</strong> Developed a system to manage students, faculty, and courses.</li>
+    </ul>
+</section>
+
+<footer>
+    <p>&copy; 2025 Mohd Anas | Data Analyst Portfolio</p>
+</footer>
+
+<!-- Scroll Animation Script -->
+<script>
+    const sections = document.querySelectorAll("section");
+    const revealSection = () => {
+        sections.forEach(sec => {
+            const secTop = sec.getBoundingClientRect().top;
+            if (secTop < window.innerHeight - 100) {
+                sec.classList.add("show");
+            }
+        });
+    };
+    window.addEventListener("scroll", revealSection);
+    revealSection();
+</script>
+
+</body>
+</html>
