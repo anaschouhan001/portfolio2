@@ -1,228 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohd Anas - Data Analyst</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        /* Global Styles */
-        body {
-            font-family: 'Segoe UI', Tahoma, sans-serif;
-            margin: 0;
-            background: #f5f5f5;
-            color: #333;
-            scroll-behavior: smooth;
-        }
-
-        /* Header */
-        header {
-            background: linear-gradient(90deg, #0d1b2a, #1b263b);
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-            animation: fadeInDown 1.2s ease-in-out;
-        }
-        header img {
-            width: 160px;
-            border-radius: 50%;
-            border: 4px solid white;
-            animation: bounce 3s infinite ease-in-out;
-            box-shadow: 0 0 20px rgba(255,255,255,0.6);
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-        }
-        header img:hover {
-            transform: scale(1.08);
-            box-shadow: 0 0 40px rgba(255, 204, 0, 0.8);
-        }
-        header h1 {
-            font-size: 2.8em;
-            margin: 15px 0 5px;
-            letter-spacing: 2px;
-            animation: fadeIn 1.5s ease-in-out;
-        }
-        header h2 {
-            font-weight: normal;
-            font-size: 1.3em;
-            color: #ffcc00;
-            animation: fadeIn 2s ease-in-out;
-        }
-        header p {
-            margin: 5px 0;
-            animation: fadeIn 2.2s ease-in-out;
-        }
-
-        /* Navigation */
-        nav {
-            background: #1b263b;
-            text-align: center;
-            padding: 12px 0;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
-        nav a {
-            color: white;
-            margin: 0 18px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s, transform 0.3s;
-        }
-        nav a:hover {
-            color: #ffcc00;
-            transform: translateY(-2px);
-        }
-
-        /* Sections */
-        section {
-            max-width: 1000px;
-            margin: auto;
-            background: white;
-            padding: 25px;
-            margin-top: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-in-out;
-        }
-        section.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        h3 {
-            color: #0d1b2a;
-            border-bottom: 3px solid #ffcc00;
-            padding-bottom: 6px;
-            margin-bottom: 15px;
-            position: relative;
-            animation: slideInLeft 1s ease-in-out;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        ul li {
-            padding: 6px 0;
-            animation: fadeInUp 0.8s ease-in-out;
-        }
-
-        /* Footer */
-        footer {
-            background: #0d1b2a;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 30px;
-            font-size: 0.9em;
-        }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes fadeInDown {
-            from { transform: translateY(-40px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-        @keyframes slideInLeft {
-            from { transform: translateX(-40px); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-        @keyframes fadeInUp {
-            from { transform: translateY(20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-12px); }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="theme-color" content="#0b1120">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohd Anas | Data Scientist & ML Engineer</title>
+  <meta name="description" content="Mohd Anas — Data Analyst, Data Scientist and Machine Learning Engineer based in Noida, India. Python, SQL, scikit-learn, RAG, LangGraph, Power BI.">
+  <meta property="og:title" content="Mohd Anas | Data Scientist & ML Engineer">
+  <meta property="og:description" content="Data analytics, machine learning and agentic AI projects.">
+  <meta property="og:image" content="profile.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    let t = 'dark'; try { t = localStorage.getItem('theme') || 'dark'; } catch (e) {} document.documentElement.dataset.theme = t;
+  </script>
 </head>
 <body>
 
-<header>
-    <img src="image.png" alt="Mohd Anas">
-    <h1>MOHD ANAS</h1>
-    <h2>Data Analyst</h2>
-    <p><i class="fas fa-phone"></i> +91 7055813193 | <i class="fas fa-envelope"></i> chouhananas7@gmail.com</p>
-    <p><i class="fas fa-map-marker-alt"></i> Kairana, Shamli, U.P. | 
-       <a href="https://www.linkedin.com/in/mohd-anas-bb8191322?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" style="color:white">LinkedIn</a> | 
-       <a href="https://github.com/anaschouhan001" style="color:white">GitHub</a>
-    </p>
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a href="#home" class="brand">Mohd Anas<span>.</span></a>
+    <nav class="nav" id="nav">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="topbar-actions">
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
+      <a class="btn btn-primary btn-sm hide-sm" href="Mohd-Anas-Resume.pdf" target="_blank" rel="noopener">Resume</a>
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
 </header>
 
-<nav>
-    <a href="#about">About</a>
-    <a href="#certificates">Certificates</a>
-    <a href="#education">Education</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-</nav>
+<main>
 
-<section id="about">
-    <h3>About Me</h3>
-    <p>Motivated BCA graduate with a strong foundation in data analysis, visualization, and machine learning. Skilled in uncovering patterns to support data-driven decisions. Eager to apply analytical and problem-solving skills in a Data Analyst internship to gain real-world experience and grow professionally.</p>
-</section>
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="hero-text reveal">
+        <p class="eyebrow"><span class="dot"></span> Open to Data Scientist / ML Engineer roles</p>
+        <h1>Hi, I'm <span class="accent">Mohd Anas</span></h1>
+        <h2 class="role">Data Analyst · Data Scientist · ML &amp; AI Engineer</h2>
+        <p class="lead">
+          I turn large, messy datasets into decisions. From automated KPI reporting to NLP classifiers
+          and agentic RAG systems, I build data and AI solutions that are accurate, explainable and
+          ready for production.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#projects"><i class="fa-solid fa-layer-group"></i> View Projects</a>
+          <a class="btn btn-ghost" href="Mohd-Anas-Resume.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-arrow-down"></i> Download Resume</a>
+        </div>
+        <div class="socials">
+          <a href="https://github.com/anaschouhan001" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/mohd-anas-bb8191322/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="mailto:chouhananas7@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          <span class="loc"><i class="fa-solid fa-location-dot"></i> Noida, Uttar Pradesh, India</span>
+        </div>
+      </div>
+      <div class="hero-photo reveal">
+        <div class="photo-frame">
+          <img src="profile.jpg" alt="Portrait of Mohd Anas" width="640" height="960">
+        </div>
+      </div>
+    </div>
 
-<section id="certificates">
-    <h3>Certificates</h3>
-    <ul>
-        <li>Internship Studio Certificate of completion of training of Data Analytics</li>
-        <li>Internship Studio Certificate of Internship of Data Analytics</li>
-    </ul>
-</section>
+    <div class="container stats reveal">
+      <div class="stat"><strong>1+ yr</strong><span>Industry experience in analytics</span></div>
+      <div class="stat"><strong>98%</strong><span>Test accuracy on NLP classifier</span></div>
+      <div class="stat"><strong>35%</strong><span>Faster reporting turnaround</span></div>
+      <div class="stat"><strong>50K+</strong><span>Records analyzed per dataset</span></div>
+    </div>
+  </section>
 
-<section id="education">
-    <h3>Education</h3>
-    <ul>
-        <li><strong>Bachelor of Computer Applications</strong> - IIMT University (2022 - 2025)</li>
-        <li><strong>Intermediate</strong> - S.N. Inter College, Kairana (2019 - 2021)</li>
-    </ul>
-</section>
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="kicker">01 · About</p>
+        <h2>Professional Summary</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I'm a Data Scientist and Machine Learning Engineer with <strong>1+ year of experience</strong> building
+            analytics systems on large, unstructured datasets. Currently an <strong>MIS Analyst at Rohan Motors Ltd</strong>,
+            I design the KPI reporting architecture that senior management uses for weekly and monthly decisions.
+          </p>
+          <p>
+            On the ML side, I trained an NLP text-classification model to <strong>98% test accuracy</strong>, built a
+            recommender system, and engineered <strong>ResearchGPT</strong>, an end-to-end agentic RAG platform with an
+            8-stage LangGraph pipeline, hybrid retrieval and per-claim fact verification.
+          </p>
+          <p>
+            I'm pursuing an MCA at Glocal University (2027) and looking for roles where I can ship data products
+            and ML systems that move real business metrics.
+          </p>
+        </div>
+        <ul class="about-facts reveal">
+          <li><i class="fa-solid fa-briefcase"></i><div><span>Current role</span>MIS Analyst · Rohan Motors Ltd</div></li>
+          <li><i class="fa-solid fa-graduation-cap"></i><div><span>Education</span>MCA (pursuing) · BCA 2025</div></li>
+          <li><i class="fa-solid fa-location-dot"></i><div><span>Location</span>Noida, UP, India</div></li>
+          <li><i class="fa-solid fa-bullseye"></i><div><span>Focus</span>Data Science · ML · GenAI / RAG</div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-<section id="skills">
-    <h3>Skills</h3>
-    <ul>
-        <li>Python, HTML, CSS, DBMS, SQL, Power BI, JavaScript, Microsoft Excel,Git</li>
-    </ul>
-</section>
+  <!-- EXPERIENCE -->
+  <section class="section alt" id="experience">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="kicker">02 · Experience</p>
+        <h2>Professional Experience</h2>
+      </div>
+      <div class="timeline">
+        <article class="job reveal">
+          <div class="job-meta">
+            <span class="date">Oct 2025 – Present</span>
+            <span class="place">Noida, India</span>
+          </div>
+          <div class="job-body">
+            <h3>MIS Analyst <small>(Data Analytics &amp; Reporting)</small></h3>
+            <p class="company">Rohan Motors Ltd</p>
+            <ul>
+              <li>Design and maintain the end-to-end MIS reporting architecture, delivering weekly and monthly KPI dashboards used by senior management for executive decision-making.</li>
+              <li>Automated recurring reporting workflows with SQL and Advanced Excel (Power Query, Power Pivot, XLOOKUP), <strong>cutting manual turnaround time by 35%</strong>.</li>
+              <li>Built data validation and cleaning routines across multi-source datasets, <strong>sustaining 99% accuracy</strong> on figures reported to leadership, and consolidated high-volume sales data into repeatable templates.</li>
+            </ul>
+            <div class="tags"><span>SQL</span><span>Power Query</span><span>Power Pivot</span><span>KPI Reporting</span><span>Data Validation</span></div>
+          </div>
+        </article>
 
-<section id="projects">
-    <h3>Projects</h3>
-    <ul>
-        <li><strong>Face Emotion Detection:</strong> Built a model to detect emotions from facial expressions using computer vision.</li>
-        <li><strong>Zomato Clone:</strong> Developed a food delivery app with restaurant search and order features.</li>
-        <li><strong>To-Do List App:</strong> Created a task manager with add, edit, and complete options.</li>
-        <li><strong>Flappy Bird Game:</strong> Designed a game with real-time scoring and controls.</li>
-        <li><strong>College Management System:</strong> Developed a system to manage students, faculty, and courses.</li>
-        <li><strong>Diwali Sales Data:</strong>Data Cleaning with Pandas: Cleaned and preprocessed data by handling missing values, duplicates, and formatting errors using Pandas.
-                                               Data Visualization with Seaborn: Created charts and graphs to visualize data trends using Seaborn.</li>
-        <li><strong>Qr Code Generator:</strong>A Python QR code generator converts text, URLs, or other data into scannable QR codes.Using libraries like qrcode and Pillow, you can:</li>                                       
-    </ul>
-</section>
+        <article class="job reveal">
+          <div class="job-meta">
+            <span class="date">Nov 2024 – Apr 2025</span>
+            <span class="place">Remote</span>
+          </div>
+          <div class="job-body">
+            <h3>Data Analytics Intern</h3>
+            <p class="company">Internship Studio</p>
+            <ul>
+              <li>Processed and analyzed <strong>50,000+ raw records</strong> in Python (Pandas, NumPy), using exploratory data analysis to surface sales trends and customer behavior patterns.</li>
+              <li>Optimized SQL extraction queries with targeted joins, <strong>cutting data retrieval time by 30%</strong>.</li>
+              <li>Delivered automated Power BI dashboards and MIS reports that standardized performance tracking across business units.</li>
+            </ul>
+            <div class="tags"><span>Python</span><span>Pandas</span><span>EDA</span><span>SQL</span><span>Power BI</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
-<footer>
-    <p>&copy; 2025 Mohd Anas | Data Analyst Portfolio</p>
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="kicker">03 · Projects</p>
+        <h2>Data Science &amp; AI Projects</h2>
+        <p class="sub">Selected work across generative AI, machine learning, NLP and business analytics.</p>
+      </div>
+      <div class="filters reveal" id="filters">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="genai">Generative AI</button>
+        <button class="chip" data-filter="ml">Machine Learning</button>
+        <button class="chip" data-filter="analytics">Analytics &amp; BI</button>
+      </div>
+      <div class="projects" id="projectGrid"></div>
+      <div class="more reveal">
+        <a class="btn btn-ghost" href="https://github.com/anaschouhan001?tab=repositories" target="_blank" rel="noopener">
+          <i class="fa-brands fa-github"></i> See all repositories on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section alt" id="skills">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="kicker">04 · Skills</p>
+        <h2>Technical Skills</h2>
+      </div>
+      <div class="skills">
+        <div class="skill-card reveal">
+          <h3><i class="fa-solid fa-code"></i> Programming &amp; Databases</h3>
+          <div class="tags"><span>Python</span><span>SQL</span><span>MySQL</span><span>JavaScript / TypeScript</span><span>Git</span><span>GitHub</span><span>Jupyter</span></div>
+        </div>
+        <div class="skill-card reveal">
+          <h3><i class="fa-solid fa-brain"></i> Machine Learning &amp; NLP</h3>
+          <div class="tags"><span>scikit-learn</span><span>Classification</span><span>Regression</span><span>Clustering</span><span>Recommender Systems</span><span>Feature Engineering</span><span>Cross-Validation</span><span>Model Deployment</span><span>NLTK</span><span>TF-IDF</span><span>Semantic Search</span></div>
+        </div>
+        <div class="skill-card reveal">
+          <h3><i class="fa-solid fa-robot"></i> Generative AI &amp; LLMs</h3>
+          <div class="tags"><span>RAG</span><span>LangGraph Agents</span><span>Prompt Engineering</span><span>LLM Tool-Calling</span><span>ChromaDB</span><span>Sentence-Transformers</span><span>Gemini</span><span>Groq</span><span>OpenRouter</span><span>Ollama</span></div>
+        </div>
+        <div class="skill-card reveal">
+          <h3><i class="fa-solid fa-chart-column"></i> Analysis &amp; Visualization</h3>
+          <div class="tags"><span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>EDA</span><span>Data Cleaning</span><span>Statistics</span><span>KPI Reporting</span><span>Power BI</span><span>Apache Superset</span><span>Advanced Excel</span></div>
+        </div>
+        <div class="skill-card reveal">
+          <h3><i class="fa-solid fa-server"></i> Data Engineering &amp; Deployment</h3>
+          <div class="tags"><span>ETL Pipelines</span><span>REST APIs</span><span>FastAPI</span><span>Streamlit</span><span>Docker</span><span>n8n Automation</span><span>Google Apps Script</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section" id="education">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="kicker">05 · Education</p>
+        <h2>Education &amp; Certifications</h2>
+      </div>
+      <div class="edu-grid">
+        <div class="edu-card reveal">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <h3>Master of Computer Applications (MCA)</h3>
+          <p>Glocal University, Uttar Pradesh</p>
+          <span class="badge">Pursuing · 2027</span>
+        </div>
+        <div class="edu-card reveal">
+          <i class="fa-solid fa-building-columns"></i>
+          <h3>Bachelor of Computer Applications (BCA)</h3>
+          <p>IIMT University, Meerut</p>
+          <span class="badge">2025</span>
+        </div>
+        <div class="edu-card reveal">
+          <i class="fa-solid fa-certificate"></i>
+          <h3>Data Analytics Certification Course</h3>
+          <p>IT Meerut</p>
+          <span class="badge">Oct 2024</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="contact-card reveal">
+        <p class="kicker">06 · Contact</p>
+        <h2>Let's work together</h2>
+        <p class="sub">I'm open to full-time Data Analyst, Data Scientist and ML/AI Engineer opportunities. The fastest way to reach me is email.</p>
+        <div class="contact-list">
+          <a href="mailto:chouhananas7@gmail.com"><i class="fa-solid fa-envelope"></i> chouhananas7@gmail.com</a>
+          <a href="tel:+917055813193"><i class="fa-solid fa-phone"></i> +91 70558 13193</a>
+          <a href="https://www.linkedin.com/in/mohd-anas-bb8191322/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i> linkedin.com/in/mohd-anas</a>
+          <a href="https://github.com/anaschouhan001" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> github.com/anaschouhan001</a>
+        </div>
+        <div class="hero-cta center">
+          <a class="btn btn-primary" href="mailto:chouhananas7@gmail.com"><i class="fa-solid fa-paper-plane"></i> Send an Email</a>
+          <a class="btn btn-ghost" href="Mohd-Anas-Resume.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-arrow-down"></i> Resume (PDF)</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <p>&copy; <span id="year"></span> Mohd Anas. All rights reserved.</p>
+    <a href="#home" class="to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
+  </div>
 </footer>
 
-<!-- Scroll Animation Script -->
-<script>
-    const sections = document.querySelectorAll("section");
-    const revealSection = () => {
-        sections.forEach(sec => {
-            const secTop = sec.getBoundingClientRect().top;
-            if (secTop < window.innerHeight - 100) {
-                sec.classList.add("show");
-            }
-        });
-    };
-    window.addEventListener("scroll", revealSection);
-    revealSection();
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
